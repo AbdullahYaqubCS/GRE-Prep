@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>GRE Prep</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Added Google Fonts -->
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#gre-prep">GRE PREP</a></li>
+            <li><a href="#content-covered">Content Covered</a></li>
+            <li><a href="#video-prep">Video Prep</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="heading-container">
+            <div class="fade-animation">GRE PREP</div>
+            <div class="quote-animation" id="quote-heading">Your quote will appear here</div>
+        </div>
+    </section>
+
+    <div class="content-covered" id="content-covered">
+        <h2>Content Covered</h2>
+        <div class="file-links">
+            <div class="file-link">
+                <a href="https://drive.google.com/drive/folders/1PwBMd5aRQ2exBAqSVj8L0857hMhgn0g_?usp=sharing">
+                    <span class="file-icon">📁</span>
+                    <span class="file-title">Content Shared</span>
+                </a>
+            </div>
+            <div class="file-link">
+                <a href="https://drive.google.com/drive/folders/1KGcGNHUCRv8eMIH3i2eudPoYvsgOaeuc?usp=sharing">
+                    <span class="file-icon">📁</span>
+                    <span class="file-title">Discussed in Class</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="playlist-container" id="video-prep">
+        <h2>Recommended Videos</h2>
+        <div class="playlist-cards">
+            <div class="playlist-card">
+                <a href="https://www.youtube.com/playlist?list=PLC58778F28211FA19">
+                    <span class="playlist-icon">🎥</span>
+                    <span class="playlist-title">Probability</span>
+                </a>
+            </div>
+            <div class="playlist-card">
+                <a href="https://www.youtube.com/playlist?list=PLSQl0a2vh4HDL79RlGmKk77ODVXikS2ez">
+                    <span class="playlist-icon">🎥</span>
+                    <span class="playlist-title">Inequalities</span>
+                </a>
+            </div>
+            <div class="playlist-card">
+                <a href="https://www.youtube.com/playlist?list=PL26812DF9846578C3">
+                    <span class="playlist-icon">🎥</span>
+                    <span class="playlist-title">Geometry</span>
+                </a>
+            </div>
+            <div class="playlist-card">
+                <a href="https://www.youtube.com/playlist?list=PL7AF1C14AF1B05894">
+                    <span class="playlist-icon">🎥</span>
+                    <span class="playlist-title">Algebra Basics</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const quotes = [
+            "Success is the result of preparation, hard work, and learning from failure.",
+            "The future belongs to those who believe in the beauty of their dreams.",
+            "The only limit to our realization of tomorrow will be our doubts of today."
+        ];
+        
+        const quoteText = document.getElementById("quote-text");
+        const quoteHeading = document.getElementById("quote-heading");
+        let index = 0;
+
+        function typeQuote(quote) {
+            // For quote in the heading
+            quoteHeading.textContent = "";
+            let charIndex = 0;
+
+            function typeChar() {
+                if (charIndex < quote.length) {
+                    quoteHeading.textContent += quote.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeChar, 50); // Adjust typing speed here
+                }
+            }
+            typeChar();
+        }
+
+        setInterval(() => {
+            typeQuote(quotes[index]);
+            index = (index + 1) % quotes.length; // Cycle through quotes
+        }, 5000); // Change quote every 5 seconds
+
+        // Initial call to set the first quote in the heading
+        typeQuote(quotes[index]);
+    </script>
+
+<footer class="footer">
+    <p> © Abdullah Yaqub</p>
+</footer>
+
+</body>
+</html>
