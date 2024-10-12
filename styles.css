@@ -201,9 +201,17 @@ body {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0 15px; /* Add horizontal padding to the navbar */
+    }
+
     .navbar ul {
         flex-direction: row; /* Keep navbar items horizontal */
         align-items: center; /* Center items */
+        justify-content: space-between; /* Space items evenly */
+        list-style-type: none; /* Remove default list styles */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
     }
 
     .hero {
@@ -263,4 +271,60 @@ body {
     font-size: 18px; /* Font size */
     font-family: 'Roboto', sans-serif; /* Font family */
     opacity: 0.8; /* Slightly transparent for a subtle effect */
+}
+
+/* Styles for Miscellaneous Section */
+.miscellaneous-section {
+    margin: 20px 0; /* Margin for spacing */
+    text-align: center; /* Center the section */
+}
+
+.miscellaneous-section h2 {
+    font-size: 36px; /* Heading size */
+    color: #333; /* Heading color */
+    margin: 10px 0; /* Margin for spacing */
+    text-transform: uppercase; /* Uppercase for style */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+.misc-links {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.misc-link {
+    margin: 10px; /* Margin between links */
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.misc-link a {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    text-decoration: none;
+    color: #333; /* Text color */
+    font-size: 20px; /* Font size */
+    padding: 10px 15px; /* Padding */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f5f0e1; /* Background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover */
+}
+
+.misc-link a:hover {
+    background-color: #e0e0e0; /* Background color on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.misc-icon {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 24px; /* Icon size */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .misc-links {
+        flex-direction: column; /* Change to vertical layout */
+        align-items: center; /* Center items */
+    }
 }

@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>GRE Prep</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Added Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar">
         <ul>
             <li><a href="#gre-prep">GRE PREP</a></li>
             <li><a href="#content-covered">Content Covered</a></li>
             <li><a href="#video-prep">Video Prep</a></li>
+            <li><a href="#miscellaneous">Miscellaneous</a></li>
         </ul>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="heading-container">
             <div class="fade-animation">GRE PREP</div>
@@ -23,6 +26,7 @@
         </div>
     </section>
 
+    <!-- Content Covered Section -->
     <div class="content-covered" id="content-covered">
         <h2>Content Covered</h2>
         <div class="file-links">
@@ -41,6 +45,7 @@
         </div>
     </div>
 
+    <!-- Video Prep Section -->
     <div class="playlist-container" id="video-prep">
         <h2>Recommended Videos</h2>
         <div class="playlist-cards">
@@ -71,6 +76,32 @@
         </div>
     </div>
 
+    <!-- Miscellaneous Section -->
+    <div class="miscellaneous-section" id="miscellaneous">
+        <h2>Miscellaneous</h2>
+        <div class="misc-links">
+            <div class="misc-link">
+                <a href="https://www.ets.org/gre.html">
+                    <span class="misc-icon">📝</span>
+                    <span class="misc-title">Official GRE Website</span>
+                </a>
+            </div>
+            <div class="misc-link">
+                <a href="https://edurev.in/tests/55016/Mock-Test-Series-for-GRE?gad_source=1&gclid=CjwKCAjwmaO4BhAhEiwA5p4YL48zqIb_HbvTw06jag0pIEb_Qx0EFn1U_mA1X999Ipqi7G7WkAeAFRoC8ekQAvD_BwE">
+                    <span class="misc-icon">📝</span>
+                    <span class="misc-title">Free Mock Tests</span>
+                </a>
+            </div>
+            <div class="misc-link">
+                <a href="https://gre.magoosh.com/practice_tests/free">
+                    <span class="misc-icon">📝</span>
+                    <span class="misc-title">Magoosh Test Prep</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Quote Typing Animation -->
     <script>
         const quotes = [
             "Success is the result of preparation, hard work, and learning from failure.",
@@ -78,12 +109,10 @@
             "The only limit to our realization of tomorrow will be our doubts of today."
         ];
         
-        const quoteText = document.getElementById("quote-text");
         const quoteHeading = document.getElementById("quote-heading");
         let index = 0;
 
         function typeQuote(quote) {
-            // For quote in the heading
             quoteHeading.textContent = "";
             let charIndex = 0;
 
@@ -91,7 +120,7 @@
                 if (charIndex < quote.length) {
                     quoteHeading.textContent += quote.charAt(charIndex);
                     charIndex++;
-                    setTimeout(typeChar, 50); // Adjust typing speed here
+                    setTimeout(typeChar, 50);
                 }
             }
             typeChar();
@@ -99,16 +128,15 @@
 
         setInterval(() => {
             typeQuote(quotes[index]);
-            index = (index + 1) % quotes.length; // Cycle through quotes
-        }, 5000); // Change quote every 5 seconds
+            index = (index + 1) % quotes.length;
+        }, 5000);
 
-        // Initial call to set the first quote in the heading
         typeQuote(quotes[index]);
     </script>
 
-<footer class="footer">
-    <p> © Abdullah Yaqub</p>
-</footer>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© Abdullah Yaqub</p>
+    </footer>
 </body>
 </html>
