@@ -214,6 +214,10 @@ body {
         margin: 0; /* Remove default margin */
     }
 
+    .navbar a {
+        font-size: 16px; /* Adjusted font size for mobile */
+    }
+
     .hero {
         padding: 20px; /* Reduced padding */
     }
@@ -237,6 +241,11 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    .navbar a {
+        font-size: 14px; /* Further reduced font size for very small screens */
+    }
+
     .fade-animation {
         font-size: 48px; /* Further reduced for small screens */
     }

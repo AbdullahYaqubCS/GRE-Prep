@@ -10,10 +10,15 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <ul>
+        <div class="navbar-toggle" id="navbar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
             <li><a href="#gre-prep">GRE PREP</a></li>
-            <li><a href="#content-covered">Content Covered</a></li>
-            <li><a href="#video-prep">Video Prep</a></li>
+            <li><a href="#content-covered">Content</a></li>
+            <li><a href="#video-prep">Videos</a></li>
             <li><a href="#miscellaneous">Miscellaneous</a></li>
         </ul>
     </nav>
@@ -132,6 +137,14 @@
         }, 5000);
 
         typeQuote(quotes[index]);
+
+        // Hamburger menu functionality
+        const navbarToggle = document.getElementById("navbar-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        navbarToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
     </script>
 
     <!-- Footer -->
